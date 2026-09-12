@@ -78,13 +78,18 @@ const experiences = [
 ];
 
 const destinations = [
-  ['London', 'Private yacht in the city', 'January · February · March · November · December'],
-  ['Brighton', 'A yacht weekend by the sea', 'April · May'],
-  ['Falmouth', 'Stay aboard in Cornwall', 'June'],
-  ['Loch Ness', 'Sleep on Loch Ness', 'July'],
-  ['Edinburgh', 'Your yacht at the Fringe', 'August'],
-  ['Liverpool', 'Waterfront weekend', 'September'],
-  ['Bristol', 'Stay in the Floating Harbour', 'October']
+  ['London', 'Private skyline dining and city-light evenings on board.', 'January'],
+  ['London', 'Valentine\'s escapes with dinner, flowers and Champagne.', 'February'],
+  ['London', 'Spring proposals and intimate celebrations by the marina.', 'March'],
+  ['Brighton', 'Seaside yacht weekends with relaxed coastal dining.', 'April'],
+  ['Brighton', 'Sunset cocktail sessions and private entertainment afloat.', 'May'],
+  ['Falmouth', 'Cornish summer stays with curated seafood experiences.', 'June'],
+  ['Loch Ness', 'Hunt the Nessie family adventures with stories of the loch.', 'July'],
+  ['Edinburgh', 'Fringe season hosting, pre-show drinks, onboard entertainment acts and waterfront nights.', 'August'],
+  ['Liverpool', 'Waterfront music-weekend stays and celebration dining.', 'September'],
+  ['Bristol', 'Floating Harbour escapes with private hosted evenings.', 'October'],
+  ['London', 'Autumn city breaks with chef-led dining on deck.', 'November'],
+  ['London', 'Festive private gatherings and New Year celebration planning.', 'December']
 ];
 
 function BookingDialog({ open, onClose }) {
@@ -300,18 +305,19 @@ function App() {
         <section id="destinations" className="darkSection destinations">
           <Container maxWidth="lg">
             <Typography className="eyebrow">THE YACHT MOVES</Typography>
-            <Typography variant="h2" sx={{ fontSize: { xs: 50, md: 70 } }}>Seven <em>waterfront worlds</em>.</Typography>
+            <Typography variant="h2" sx={{ fontSize: { xs: 50, md: 70 } }}>Twelve <em>waterfront worlds</em>.</Typography>
             <Typography color="text.secondary" sx={{ maxWidth: 700, mt: 2, mb: 5, lineHeight: 1.7 }}>
               The 2026/27 plan follows seasonal demand, events and the most atmospheric waterfront destinations.
               Every relocation is subject to marina permission, berth availability, insurance and passage logistics.
             </Typography>
             <Grid container spacing={2}>
-              {destinations.map(([place, line, months], i) => <Grid size={{ xs:12, sm:6, md:4 }} key={place}>
+              {destinations.map(([place, line, month]) => <Grid size={{ xs:12, sm:6, md:4 }} key={`${place}-${month}`}>
                 <Box className="destinationCard">
-                  <Typography sx={{ color: gold, fontSize: 12, letterSpacing: '.18em' }}>0{i+1}</Typography>
-                  <Typography variant="h3" sx={{ fontSize: 40, mt: 1 }}>{place}</Typography>
-                  <Typography sx={{ mt: 1 }}>{line}</Typography>
-                  <Typography color="text.secondary" sx={{ mt: 2, fontSize: 13 }}>{months}</Typography>
+                  <Typography variant="h3" sx={{ fontSize: 34, mt: 1, lineHeight: 1.15 }}>
+                    <Box component="span" sx={{ color: 'text.primary' }}>{month} </Box>
+                    <Box component="span" sx={{ color: gold }}>{place}</Box>
+                  </Typography>
+                  <Typography sx={{ mt: 1.5 }}>{line}</Typography>
                 </Box>
               </Grid>)}
             </Grid>

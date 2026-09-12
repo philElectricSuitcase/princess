@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap');
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #07131d; }
+.site { overflow: hidden; }
+.hero {
+  min-height: 92vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(4,13,20,.88) 0%, rgba(4,13,20,.55) 48%, rgba(4,13,20,.22) 100%),
+    linear-gradient(180deg, rgba(4,13,20,.15), #07131d 100%),
+    url('https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?auto=format&fit=crop&w=2200&q=88') center/cover;
+}
+.heroContent { position: relative; z-index: 2; padding-top: 100px; }
+.hero h1 em, h2 em, h3 em { font-style: italic; color: #d8b46a; }
+.heroOverlay { position:absolute; inset:0; background: radial-gradient(circle at 70% 35%, transparent, rgba(0,0,0,.35) 70%); }
+.scrollHint { position:absolute; bottom:26px; left:50%; transform:translateX(-50%); font-size:10px; letter-spacing:.25em; color:#c3cccf; z-index:2; }
+.scrollHint span { color:#d8b46a; margin-left:8px; }
+.eyebrow { color:#d8b46a; letter-spacing:.25em; font-size:11px !important; font-weight:700 !important; margin-bottom:18px !important; }
+.introBand { background:#f7f3eb; color:#12202a; padding:110px 0; }
+.introBand .MuiTypography-colorTextSecondary { color:#52606a; }
+.darkSection { padding:110px 0; background:#081722; }
+.experienceCard { height:100%; background:linear-gradient(145deg,#102432,#0a1822) !important; border:1px solid rgba(216,180,106,.16); transition:.3s; }
+.experienceCard:hover { transform:translateY(-6px); border-color:rgba(216,180,106,.55); box-shadow:0 20px 60px rgba(0,0,0,.28); }
+.goldIcon { width:48px; height:48px; display:grid; place-items:center; color:#d8b46a; margin-bottom:18px; }
+.yachtSection { padding:120px 0; background:#f7f3eb; color:#12202a; }
+.yachtSection .MuiTypography-colorTextSecondary { color:#52606a; }
+.yachtImage {
+  min-height:560px;
+  position:relative;
+  background:
+    linear-gradient(180deg,transparent 55%,rgba(0,0,0,.72)),
+    url('https://images.unsplash.com/photo-1540946485063-a40da27545f8?auto=format&fit=crop&w=1400&q=88') center/cover;
+}
+.luxuryFrame { border:1px solid rgba(216,180,106,.55); box-shadow:18px 18px 0 rgba(216,180,106,.12); }
+.imageCaption { position:absolute; bottom:22px; left:25px; display:flex; gap:10px; align-items:center; font-size:11px; letter-spacing:.2em; color:white; }
+.occasionSection { padding:110px 0; background:#0c1d28; }
+.occasionCard { padding:32px; min-height:205px; border:1px solid rgba(255,255,255,.1); background:rgba(255,255,255,.025); transition:.25s; }
+.occasionCard:hover { border-color:rgba(216,180,106,.45); background:rgba(216,180,106,.05); }
+.destinations { background:#07131d; }
+.destinationCard { min-height:190px; padding:28px; border:1px solid rgba(255,255,255,.1); background:linear-gradient(145deg,rgba(255,255,255,.03),rgba(255,255,255,.01)); }
+.quoteSection { padding:125px 0; background:linear-gradient(135deg,#112b3a,#07131d); }
+.footer { padding:70px 0 35px; background:#050e15; }
+@media (max-width: 900px) {
+  .hero { min-height: 86vh; }
+  .yachtImage { min-height:420px; }
+}
+@media (max-width: 600px) {
+  .hero h1 { font-size:54px !important; }
+  .introBand,.darkSection,.yachtSection,.occasionSection,.quoteSection { padding:80px 0; }
+  .yachtImage { min-height:360px; }
+}

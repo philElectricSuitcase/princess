@@ -53,6 +53,27 @@ const experiences = [
     price: 'from £795',
     text: 'Bring your people. Private entertainment, drinks, food and a luxury waterfront setting for up to 10 guests.',
     tag: 'Up to 10'
+  },
+  {
+    icon: <LocalBar />,
+    title: 'Cocktail Making for Two',
+    price: 'from £120 each',
+    text: 'A 90-minute private cocktail making session for two, including a curated food platter.',
+    tag: '90-minute session'
+  },
+  {
+    icon: <Restaurant />,
+    title: 'Cookery on the River',
+    price: 'Price on request',
+    text: 'Learn to cook a 3 course menu, from Indian to Italian, English to French. We build the menu with you. A three-hour experience including all ingredients, cooking, dining and paired wine.',
+    tag: 'Max 6 guests'
+  },
+  {
+    icon: <Sailing />,
+    title: 'Hunt the Nessie',
+    price: 'Price on request',
+    text: 'Up to 10 people on board for three hours as we look for the Loch Ness Monster. Scan the water, use the fish finder and hear stories of the loch. A great way to spend family time.',
+    tag: 'Up to 10 guests'
   }
 ];
 

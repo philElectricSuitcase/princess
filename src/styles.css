@@ -33,15 +33,25 @@ body { margin: 0; background: #07131d; }
   position:relative;
   background:
     linear-gradient(180deg,transparent 55%,rgba(0,0,0,.72)),
-    url('https://images.unsplash.com/photo-1540946485063-a40da27545f8?auto=format&fit=crop&w=1400&q=88') center/cover;
+    url('https://dgbstore.blob.core.windows.net/images/22/1387/6be7daad-d6e4-49d1-8dcd-67d482ce3cc8/b78819e5-4554-4c62-8d0f-15740e28bdff.2048.jpg') center/cover;
 }
 .luxuryFrame { border:1px solid rgba(216,180,106,.55); box-shadow:18px 18px 0 rgba(216,180,106,.12); }
 .imageCaption { position:absolute; bottom:22px; left:25px; display:flex; gap:10px; align-items:center; font-size:11px; letter-spacing:.2em; color:white; }
-.occasionSection { padding:110px 0; background:#0c1d28; }
-.occasionCard { padding:32px; min-height:205px; border:1px solid rgba(255,255,255,.1); background:rgba(255,255,255,.025); transition:.25s; }
+.occasionSection { padding:110px 0; background:linear-gradient(180deg,#0a1721 0%,#0d2230 100%); }
+.occasionSection h2 { color:#fff8ec; }
+.occasionSection .MuiTypography-colorTextSecondary { color:#d2dee3; }
+.occasionCard { padding:32px; min-height:205px; border:1px solid rgba(255,255,255,.16); background:rgba(255,255,255,.06); transition:.25s; }
+.occasionCard .MuiTypography-h3 { color:#fff8ec; }
+.occasionCard .MuiTypography-root { color:#ecf3f6; }
+.occasionCard .MuiTypography-colorTextSecondary { color:#deeaef !important; }
 .occasionCard:hover { border-color:rgba(216,180,106,.45); background:rgba(216,180,106,.05); }
-.destinations { background:#07131d; }
-.destinationCard { min-height:190px; padding:28px; border:1px solid rgba(255,255,255,.1); background:linear-gradient(145deg,rgba(255,255,255,.03),rgba(255,255,255,.01)); }
+.destinations { background:linear-gradient(180deg,#06111a 0%,#0a1b28 100%); }
+.destinations h2 { color:#fff8ec; }
+.destinations .MuiTypography-colorTextSecondary { color:#cfdae0; }
+.destinationCard { min-height:190px; padding:28px; border:1px solid rgba(255,255,255,.18); background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.03)); }
+.destinations .MuiContainer-root > .MuiTypography-colorTextSecondary { color:#dbe6eb; }
+.destinationCard .MuiTypography-root { color:#edf4f7; }
+.destinationCard .MuiTypography-colorTextSecondary { color:#dbe5ea !important; }
 .quoteSection { padding:125px 0; background:linear-gradient(135deg,#112b3a,#07131d); }
 .footer { padding:70px 0 35px; background:#050e15; }
 @media (max-width: 900px) {

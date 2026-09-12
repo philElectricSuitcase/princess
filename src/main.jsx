@@ -51,8 +51,8 @@ const experiences = [
     icon: <Groups />,
     title: 'The Yacht Party',
     price: 'from £795',
-    text: 'Bring your people. Private entertainment, drinks, food and a luxury waterfront setting for up to 12 guests.',
-    tag: 'Up to 12'
+    text: 'Bring your people. Private entertainment, drinks, food and a luxury waterfront setting for up to 10 guests.',
+    tag: 'Up to 10'
   }
 ];
 
@@ -84,7 +84,7 @@ function BookingDialog({ open, onClose }) {
             {experiences.map(x => <MenuItem key={x.title} value={x.title}>{x.title}</MenuItem>)}
           </TextField>
           <TextField select label="Guests" defaultValue="2" fullWidth>
-            {[2,4,6,8,10,12].map(n => <MenuItem key={n} value={n}>{n} guests</MenuItem>)}
+            {[2,4,6,8,10].map(n => <MenuItem key={n} value={n}>{n} guests</MenuItem>)}
           </TextField>
           <TextField label="Preferred destination / date" placeholder="e.g. London · 14 February" fullWidth />
           <TextField label="Anything you'd like us to arrange?" multiline minRows={3} fullWidth />
@@ -150,7 +150,7 @@ function App() {
             </Typography>
             <Typography sx={{ mt: 3, maxWidth: 650, fontSize: { xs: 17, md: 21 }, color: '#e2e7e8', lineHeight: 1.65 }}>
               Step aboard a Princess 388 and make the waterfront yours. Sunset dinners for two,
-              Valentine’s escapes, unforgettable celebrations and private entertainment for up to 12.
+              Valentine’s escapes, unforgettable celebrations and private entertainment for up to 10 people.
             </Typography>
             <Stack direction={{ xs:'column', sm:'row' }} spacing={2} sx={{ mt: 5 }}>
               <Button variant="contained" size="large" onClick={() => setBooking(true)}
@@ -183,7 +183,7 @@ function App() {
                   surroundings and a carefully curated experience.
                 </Typography>
                 <Stack direction="row" spacing={5} sx={{ mt: 4 }}>
-                  <Box><Typography variant="h4">2–12</Typography><Typography color="text.secondary">guests</Typography></Box>
+                  <Box><Typography variant="h4">2–10</Typography><Typography color="text.secondary">guests</Typography></Box>
                   <Box><Typography variant="h4">7</Typography><Typography color="text.secondary">UK destinations</Typography></Box>
                   <Box><Typography variant="h4">24/7</Typography><Typography color="text.secondary">the memories last</Typography></Box>
                 </Stack>
@@ -264,7 +264,7 @@ function App() {
                 ['Valentine’s', 'Flowers. Dinner. Champagne. Sunset. Just the two of you.', '£695+'],
                 ['Anniversary', 'A private yacht, a beautiful table and a reason to slow down.', '£500+'],
                 ['Proposal', 'A once-in-a-lifetime setting, styled exactly how you imagined it.', '£750+'],
-                ['Birthday', 'Up to 12 guests, private entertainment and the waterfront as your backdrop.', '£795+']
+                ['Birthday', 'Up to 10 guests, private entertainment and the waterfront as your backdrop.', '£795+']
               ].map(([a,b,c]) => <Grid size={{ xs:12, sm:6 }} key={a}>
                 <Box className="occasionCard">
                   <Typography variant="h3" sx={{ fontSize: 38 }}>{a}</Typography>
